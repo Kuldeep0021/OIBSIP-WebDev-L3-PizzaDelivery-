@@ -215,7 +215,7 @@ export function CartPage() {
                           <div className="flex flex-wrap gap-1 mt-1">
                             {item.details.base && <span className="text-xs text-stone-500">{item.details.base}</span>}
                             {item.details.sauce && <span className="text-xs text-stone-500">· {item.details.sauce}</span>}
-                            {item.details.Pizza && <span className="text-xs text-stone-500">· {item.details.Pizza}</span>}
+                            {item.details.cheese && <span className="text-xs text-stone-500">· {item.details.cheese}</span>}
                             {item.details.vegetables?.map((v) => (
                               <span key={v} className="text-xs text-stone-500">· {v}</span>
                             ))}
