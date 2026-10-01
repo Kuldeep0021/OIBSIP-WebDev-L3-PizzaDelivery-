@@ -1,11 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import api from '@/lib/api';
 import {
-  Package, Layers, Soup, Cheese, Sprout, Plus, Minus, Loader2,
+  Package, Layers, Soup, Pizza, Sprout, Plus, Minus, Loader2,
   AlertTriangle, Save, Search, Pencil, Check, X
 } from 'lucide-react';
 
-type InventoryCategory = 'base' | 'sauce' | 'cheese' | 'vegetable';
+type InventoryCategory = 'base' | 'sauce' | 'Pizza' | 'vegetable';
 
 interface InventoryItem {
   _id: string;
@@ -19,7 +19,7 @@ interface InventoryItem {
 const CATEGORIES: { key: InventoryCategory; label: string; icon: typeof Layers }[] = [
   { key: 'base', label: 'Pizza Bases', icon: Layers },
   { key: 'sauce', label: 'Sauces', icon: Soup },
-  { key: 'cheese', label: 'Cheeses', icon: Cheese },
+  { key: 'Pizza', label: 'Cheeses', icon: Pizza },
   { key: 'vegetable', label: 'Vegetables', icon: Sprout },
 ];
 
