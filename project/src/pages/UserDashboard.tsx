@@ -23,7 +23,7 @@ export function UserDashboard() {
     async function fetchPizzas() {
       try {
         const { data } = await api.get('/pizza');
-        setPizzas(data.pizzaVarieties || []);
+        setPizzas(data.pizzas || data.pizzaVarieties || []);
       } catch (err) {
         console.error('Error fetching pizzas:', err);
       } finally {
