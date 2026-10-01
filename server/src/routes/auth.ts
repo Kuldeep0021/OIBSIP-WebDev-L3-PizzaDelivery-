@@ -65,6 +65,7 @@ router.post(
         email,
         password,
         phone,
+        isEmailVerified: true, // Auto-verify for easy testing
         emailVerificationToken: verificationToken,
         emailVerificationExpires: verificationExpires,
       });

@@ -47,8 +47,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const { data } = await api.post('/auth/register', { name, email, password, phone });
       return { error: null, message: data.message };
     } catch (err: unknown) {
-      const error = err as { response?: { data?: { message?: string } } };
-      return { error: error.response?.data?.message || 'Registration failed' };
+      const error = err as { response?: { data?: { error?: string } } };
+      return { error: error.response?.data?.error || 'Registration failed' };
     }
   };
 
@@ -64,8 +64,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       _handleLoginResponse(data);
       return { error: null };
     } catch (err: unknown) {
-      const error = err as { response?: { data?: { message?: string } } };
-      return { error: error.response?.data?.message || 'Login failed' };
+      const error = err as { response?: { data?: { error?: string } } };
+      return { error: error.response?.data?.error || 'Login failed' };
     }
   };
 
