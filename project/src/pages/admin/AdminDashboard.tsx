@@ -3,7 +3,7 @@ import api from '@/lib/api';
 import { useRouter } from '@/context/RouterContext';
 import {
   Package, ShoppingCart, AlertTriangle, TrendingUp, Loader2,
-  ArrowRight, Clock, ChefHat, Bike, Layers, Soup, Cheese, Sprout
+  ArrowRight, Clock, ChefHat, Bike, Layers, Soup, Pizza, Sprout
 } from 'lucide-react';
 
 interface InventoryItem {
@@ -100,7 +100,7 @@ export function AdminDashboard() {
   ];
 
   const categoryIcon = (category: string) => {
-    const icons: Record<string, typeof Layers> = { base: Layers, sauce: Soup, cheese: Cheese, vegetable: Sprout };
+    const icons: Record<string, typeof Layers> = { base: Layers, sauce: Soup, cheese: Pizza, vegetable: Sprout };
     return icons[category] || Package;
   };
 
