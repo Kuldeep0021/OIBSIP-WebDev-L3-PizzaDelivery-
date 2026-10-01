@@ -4,7 +4,7 @@ import { useCart } from '@/context/CartContext';
 import { useRouter } from '@/context/RouterContext';
 import {
   Check, ChevronRight, ChevronLeft, Loader2, ShoppingBag,
-  Layers, Soup, Cheese, Sprout, Pizza
+  Layers, Soup, Sprout, Pizza
 } from 'lucide-react';
 
 interface InventoryItem {
@@ -19,7 +19,7 @@ interface InventoryItem {
 const STEPS = [
   { key: 'base' as const, label: 'Pizza Base', icon: Layers, category: 'base' as const, multi: false },
   { key: 'sauce' as const, label: 'Sauce', icon: Soup, category: 'sauce' as const, multi: false },
-  { key: 'cheese' as const, label: 'Cheese', icon: Cheese, category: 'cheese' as const, multi: false },
+  { key: 'cheese' as const, label: 'Cheese', icon: Pizza, category: 'cheese' as const, multi: false },
   { key: 'vegetables' as const, label: 'Vegetables', icon: Sprout, category: 'vegetable' as const, multi: true },
 ];
 
