@@ -72,12 +72,12 @@ export function UserDashboard() {
                 <Pizza className="w-5 h-5" />
                 Build Custom Pizza
               </button>
-              <a
-                href="#menu"
+              <button
+                onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-white/15 backdrop-blur-sm border border-white/30 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-white/25 transition-all duration-200"
               >
                 Browse Menu
-              </a>
+              </button>
             </div>
           </div>
         </div>
